@@ -1,0 +1,242 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Product Info Section */
+.productInfo {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.imageContainer {
+  flex: 1;
+}
+
+.productImage {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.infoContent {
+  flex: 1;
+}
+
+.infoContent h2 {
+  font-size: 32px;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+.infoContent p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.features li {
+  font-size: 16px;
+  color: #444;
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+}
+
+.features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #8b6f47;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Gallery Section */
+.gallery {
+  margin-bottom: 100px;
+}
+
+.galleryTitle {
+  text-align: center;
+  font-size: 36px;
+  color: #2c2c2c;
+  margin-bottom: 50px;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.galleryItem {
+  text-align: center;
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.galleryItem img:hover {
+  transform: translateY(-5px);
+}
+
+.galleryCaption {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Vela Type Sections */
+.velaType {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+  padding: 60px 40px;
+  border-radius: 16px;
+  background-color: #fafafa;
+  scroll-margin-top: 80px;
+}
+
+.velaType:nth-child(even) {
+  background-color: #f5f1ed;
+}
+
+.typeContent {
+  flex: 1;
+}
+
+.typeTitle {
+  font-size: 36px;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.typeDescription {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.typeImageContainer {
+  flex: 1;
+}
+
+.typeImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.typeBenefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.benefit {
+  text-align: center;
+}
+
+.benefitIcon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.benefit h4 {
+  font-size: 16px;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.benefit p {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+/* CTA Section */
+.ctaSection {
+  text-align: center;
+  background: linear-gradient(135deg, #f5f1ed 0%, #e8dfd5 100%);
+  padding: 80px 40px;
+  border-radius: 16px;
+}
+
+.ctaSection h2 {
+  font-size: 36px;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+.ctaSection p {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  background-color: var(--taupe);
+  color: white;
+  font-size: 18px;
+  font-family: inherit;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(139, 111, 71, 0.3);
+}

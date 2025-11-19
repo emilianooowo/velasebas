@@ -1,26 +1,227 @@
-@import "tailwindcss";
+/* DECLARACIONES */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Quicksand:wght@400;600&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #FFFFFF;
+  --black: #000000;
+  --beige: #ECE9E2;
+  --taupe: #C3B297;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  color: var(--black);
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw + 0.5rem, 2.75rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 1.5vw + 0.4rem, 1.6rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 1vw + 0.3rem, 1.25rem);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* HEADER  */
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--beige);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 1rem 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: auto;
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.arrow {
+  padding-top: 2px;
+  font-size: 0.6rem;
+  transition: transform 0.5s ease;
+}
+
+.nav-item:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--beige);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem;
+  width: fit-content;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-link {
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--black);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-link:hover {
+  background-color: var(--beige);
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: var(--beige);
+  margin: 0.5rem 0;
+}
+
+.dropdown-view-all {
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  text-align: center;
+}
+
+.dropdown-view-all:hover {
+  background-color: var(--taupe);
+}
+
+/* FOOTER */
+.footer {
+  background: var(--taupe);
+  color: var(--white);
+  padding: 2rem 1rem 1rem;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.footer-logo {
+  width: auto;
+  height: 120px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: var(--white);
+  transition: opacity 0.2s;
+}
+
+.footer-col a:hover,
+.socials a:hover {
+  opacity: 0.7;
+}
+
+.socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.socials a {
+  font-size: 1.2rem;
+  color: var(--white);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
 }

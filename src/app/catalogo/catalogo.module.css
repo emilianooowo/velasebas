@@ -1,0 +1,88 @@
+.catalogoContent {
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.catalogoContainer {
+  gap: 2rem;
+  padding: 2rem;
+  display: flex;
+}
+
+.catalogoHeader {
+  padding: 5%;
+}
+
+.catalogoHeader h1 {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.categoriaList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categoriaList li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.categoriaList li:hover {
+  background-color: var(--beige);
+}
+
+.categoriaList li.active {
+  background-color: var(--taupe);
+  color: #fff;
+  font-weight: bold;
+}
+
+.productosGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.productoCard {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.productoCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.productoCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.productoCard h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 1rem 0.25rem;
+}
+
+.productoCard p {
+  font-size: 0.9rem;
+  margin: 0 1rem 0.5rem;
+}
+
+.productoCardPrecio {
+  font-weight: bold;
+  color: #f59e0b;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
